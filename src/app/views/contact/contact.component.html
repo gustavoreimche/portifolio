@@ -1,0 +1,50 @@
+<div class="flex justify-center ">
+  <div
+    class="container flex flex-col lg:flex-row items-center justify-around bg-secondary_dark shadow-lg rounded-md mb-14 mt-16 w-3/4 md:w-2/3 text-lg">
+    <span class="flex items-center">
+      <i class="fa-solid fa-envelope mr-3 text-xl"></i>
+      gustavoprdev@gmail.com
+    </span>
+    <span class="flex items-center">
+      <i class="fa-solid fa-phone mr-3 text-xl"></i>
+      +55 (53) 999935-6737
+    </span>
+    <span class="flex items-center">
+      <i class="fa-solid fa-location-dot mr-3 text-xl"></i>
+      Santana do Livramento/RS
+    </span>
+  </div>
+</div>
+
+<div class="flex justify-center w-full">
+  <form [formGroup]="contactForm" (ngSubmit)="onSubmit()"
+    class="flex flex-col bg-secondary_dark shadow-lg rounded-md p-4 w-3/4 md:w-2/3 text-lg">
+    <span class="text-4xl font-bold mb-6">Contact</span>
+
+    <mat-form-field class="example-full-width">
+      <mat-label>Name</mat-label>
+      <input matInput placeholder="Jonh Doe" id="name" formControlName="name">
+      <mat-error *ngIf="contactForm.get('name')?.errors && contactForm.get('name')?.touched" class="error">Please enter
+        your
+        name.</mat-error>
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width">
+      <mat-label>Email</mat-label>
+      <input type="email" matInput placeholder="jonhdoe@email.com" id="email" formControlName="email">
+      <mat-error *ngIf="contactForm.get('email')?.errors && contactForm.get('email')?.touched" class="error">Please
+        enter a valid email address.</mat-error>
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width">
+      <mat-label>Message</mat-label>
+      <textarea matInput id="message" formControlName="message"></textarea>
+      <mat-error *ngIf="contactForm.get('message')?.errors && contactForm.get('message')?.touched" class="error">
+        Please enter a message.</mat-error>
+    </mat-form-field>
+
+    <button class=" rounded-md w-full py-2 font-medium" [ngClass]="contactForm.invalid ? 'bg-dark': 'bg-primary'"
+      type="submit" [disabled]="contactForm.invalid">Submit</button>
+
+  </form>
+</div>
