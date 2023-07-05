@@ -1,1 +1,66 @@
-/* You can add global styles to this file, and also import other style files */
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+@import "./../node_modules/@angular/material/theming";
+@import "./../node_modules/@angular/material/prebuilt-themes/indigo-pink.css";
+
+$custom-primary: (
+  50: #cf6237,
+  100: #cf6237,
+  200: #cf6237,
+  300: #cf6237,
+  400: #cf6237,
+  500: #cf6237,
+  600: #cf6237,
+  700: #cf6237,
+  800: #cf6237,
+  900: #cf6237,
+  A100: #cf6237,
+  A200: #cf6237,
+  A400: #cf6237,
+  A700: #cf6237,
+  contrast: (
+    50: $black-87-opacity,
+    100: $black-87-opacity,
+    200: $black-87-opacity,
+    300: $black-87-opacity,
+    400: $black-87-opacity,
+    500: $black-87-opacity,
+    600: $black-87-opacity,
+    700: $black-87-opacity,
+    800: $black-87-opacity,
+    900: $black-87-opacity,
+    A100: $black-87-opacity,
+    A200: $black-87-opacity,
+    A400: $black-87-opacity,
+    A700: $black-87-opacity,
+  ),
+);
+// Defina as cores personalizadas
+$primary: mat-palette($custom-primary, 50);
+$accent: mat-palette($mat-orange);
+$warn: mat-palette($mat-red);
+
+// Defina o tema usando as cores personalizadas
+$theme: mat-dark-theme($primary, $accent, $warn);
+
+// Importe os estilos pré-construídos do Angular Material
+@include angular-material-theme($theme);
+
+html,
+body {
+  font-family: Roboto;
+  background-color: #222;
+  color: white;
+  font-weight: 500;
+  margin: auto;
+}
+
+.container {
+  padding: 16px;
+}
+
+.prompt {
+  font-family: Prompt;
+}
