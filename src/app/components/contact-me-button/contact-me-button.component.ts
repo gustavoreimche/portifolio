@@ -4,7 +4,6 @@ import { Component, OnInit, Output, EventEmitter } from '@angular/core';
   selector: 'app-contact-me-button',
   template: `
     <a
-      routerLink="/contact"
       class="bg-primary rounded-full py-3 px-5 text-xl cursor-pointer"
       (click)="contactClicked()"
     >

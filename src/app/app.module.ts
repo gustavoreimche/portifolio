@@ -5,10 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './views/template/header/header.component';
 import { FooterComponent } from './views/template/footer/footer.component';
-import {
-  BrowserAnimationsModule,
-  NoopAnimationsModule,
-} from '@angular/platform-browser/animations';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { LogoComponent } from './components/logo/logo.component';
 import { ContactMeButtonComponent } from './components/contact-me-button/contact-me-button.component';
 import { HomeComponent } from './views/home/home.component';
@@ -46,7 +43,6 @@ import { ProjectsComponent } from './views/projects/projects.component';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    NoopAnimationsModule,
     NgxTypedJsModule,
     ReactiveFormsModule,
     MatInputModule,

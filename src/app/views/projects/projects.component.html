@@ -1,1 +1,61 @@
-<p>projects works!</p>
+<div class="flex items-center flex-col gap-2">
+  <div *ngIf="!imageLoaded">
+    <app-loading width="70vw" height="50vh"></app-loading>
+  </div>
+  <div
+    [ngClass]="imageLoaded ? 'container flex flex-col items-center mt-5 justify-center bg-secondary_dark shadow-lg rounded-md  w-3/4 md:w-2/3 text-lg' : 'hidden'">
+    <span class="flex items-center text-2xl">
+      Facilite Agenda
+    </span>
+    <img src="../../../assets/img/faciliteagenda.jfif" class="p-5 " alt="" (load)="onImageLoad()">
+    <div class="flex items-center">
+      <a class="flex items-center p-2 bg-primary rounded-lg font-black shadow-xl"
+        href="https://facilite-agenda.vercel.app/" target="_blank">VISIT ONLINE <i
+          class="material-icons mb-1 ml-3">north_east</i> </a>
+    </div>
+  </div>
+  <div *ngIf="!imageLoaded">
+    <app-loading width="70vw" height="50vh"></app-loading>
+  </div>
+  <div
+    [ngClass]="imageLoaded ? 'container flex flex-col items-center justify-center bg-secondary_dark shadow-lg rounded-md w-3/4 md:w-2/3 text-lg' : 'hidden'">
+    <span class="flex items-center text-2xl">
+      Barber Manager
+    </span>
+    <img src="../../../assets/img/barbermanager.png" class="p-5 " alt="" (load)="onImageLoad()">
+    <div class="flex items-center">
+      <a class="flex items-center p-2 bg-primary rounded-lg font-black shadow-xl"
+        href="https://barber-manager.vercel.app/" target="_blank">VISIT ONLINE <i
+          class="material-icons mb-1 ml-3">north_east</i> </a>
+    </div>
+  </div>
+  <div *ngIf="!imageLoaded">
+    <app-loading width="70vw" height="50vh"></app-loading>
+  </div>
+  <div
+    [ngClass]="imageLoaded ? 'container flex flex-col items-center justify-center bg-secondary_dark shadow-lg rounded-md w-3/4 md:w-2/3 text-lg' : 'hidden'">
+    <span class="flex items-center text-2xl">
+      LR Alongamentos
+    </span>
+    <img src="../../../assets/img/lealongamentos.png" class="p-5 " alt="" (load)="onImageLoad()">
+    <div class="flex items-center">
+      <a class="flex items-center p-2 bg-primary rounded-lg font-black shadow-xl" href="lralongamentos.com.br"
+        target="_blank">VISIT ONLINE <i class="material-icons mb-1 ml-3">north_east</i> </a>
+    </div>
+  </div>
+  <div *ngIf="!imageLoaded">
+    <app-loading width="70vw" height="50vh"></app-loading>
+  </div>
+  <div
+    [ngClass]="imageLoaded ? 'container flex flex-col items-center justify-center bg-secondary_dark shadow-lg rounded-md w-3/4 md:w-2/3 text-lg' : 'hidden'">
+    <span class="flex items-center text-2xl">
+      Wheater App
+    </span>
+    <img src="../../../assets/img/wheaerapp.png" class="p-5 " alt="" (load)="onImageLoad()">
+    <div class="flex items-center">
+      <a class="flex items-center p-2 bg-primary rounded-lg font-black shadow-xl"
+        href="https://weather-app-vue-bice.vercel.app/#/" target="_blank">VISIT ONLINE <i
+          class="material-icons mb-1 ml-3">north_east</i> </a>
+    </div>
+  </div>
+</div>
